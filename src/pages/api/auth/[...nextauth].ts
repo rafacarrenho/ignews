@@ -15,6 +15,16 @@ export default NextAuth({
     // ...add more providers here
   ],
   callbacks: {
+    // async session(session) {
+    //   const userActiveSubscription = await fauna.query(
+    //     q.Get(
+    //       q.Match(
+
+    //       )
+    //     )
+    //   )
+    //   return session;
+    // },
     async signIn(user, account, profile) {
       const { email } = user;
 
